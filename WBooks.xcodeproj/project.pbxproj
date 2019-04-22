@@ -10,8 +10,13 @@
 		0CCF002A219208080061050C /* WolmoReactiveCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF0029219208080061050C /* WolmoReactiveCore.framework */; };
 		0CCF002C219208110061050C /* Wormholy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002B219208110061050C /* Wormholy.framework */; };
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
+		811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BD34B226766AF00AEE780 /* LoginViewController.swift */; };
+		811BD34E22677A4900AEE780 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BD34D22677A4900AEE780 /* LoginView.swift */; };
+		812F2DDF226E17FD000C19A1 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F2DDE226E17FD000C19A1 /* LibraryView.xib */; };
+		812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE0226E181B000C19A1 /* LibraryView.swift */; };
+		812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE2226E182A000C19A1 /* LibraryViewController.swift */; };
+		81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1D60C22665FBC000C0465 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
-		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
 		9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* WBooksUITests.swift */; };
@@ -72,9 +77,18 @@
 		0CCF0029219208080061050C /* WolmoReactiveCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoReactiveCore.framework; path = Carthage/Build/iOS/WolmoReactiveCore.framework; sourceTree = "<group>"; };
 		0CCF002B219208110061050C /* Wormholy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wormholy.framework; path = Carthage/Build/iOS/Wormholy.framework; sourceTree = "<group>"; };
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
+		811BD34B226766AF00AEE780 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		811BD34D22677A4900AEE780 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		812F2DDE226E17FD000C19A1 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
+		812F2DE0226E181B000C19A1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		812F2DE2226E182A000C19A1 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		81A1D6022266572F000C0465 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		81A1D60322665783000C0465 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
+		81A1D60422665799000C0465 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		81A1D605226657A3000C0465 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		81A1D60C22665FBC000C0465 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D1575101CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1575151CB1B27500EA395E /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +165,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812F2DDD226E17C7000C19A1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				812F2DDE226E17FD000C19A1 /* LibraryView.xib */,
+				812F2DE0226E181B000C19A1 /* LibraryView.swift */,
+				812F2DE2226E182A000C19A1 /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		81A1D60822665C03000C0465 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				812F2DDD226E17C7000C19A1 /* Library */,
+				81A1D60922665C26000C0465 /* Login */,
+			);
+			name = Views;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		81A1D60922665C26000C0465 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				81A1D60C22665FBC000C0465 /* LoginView.xib */,
+				811BD34B226766AF00AEE780 /* LoginViewController.swift */,
+				811BD34D22677A4900AEE780 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		9D1574F81CB1B27500EA395E = {
 			isa = PBXGroup;
 			children = (
@@ -175,10 +219,10 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				81A1D60822665C03000C0465 /* Views */,
 				E1530D9A1ED378F9002A9002 /* Services */,
 				CEB934DE1D21A44700DF75C2 /* ConfigurationFiles */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
-				9D1575061CB1B27500EA395E /* ViewController.swift */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
@@ -235,6 +279,10 @@
 			isa = PBXGroup;
 			children = (
 				E17065121F75B6A10042755C /* Debug.xcconfig */,
+				81A1D60322665783000C0465 /* Alpha.xcconfig */,
+				81A1D60422665799000C0465 /* Release.xcconfig */,
+				81A1D605226657A3000C0465 /* Production.xcconfig */,
+				81A1D6022266572F000C0465 /* Debug.xcconfig */,
 				CEB934E11D21A49A00DF75C2 /* Alpha.xcconfig */,
 				E17065131F75B6A10042755C /* Release.xcconfig */,
 				E12DE1621F772A370072C2FF /* Production.xcconfig */,
@@ -361,6 +409,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812F2DDF226E17FD000C19A1 /* LibraryView.xib in Resources */,
+				81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,9 +482,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
+				811BD34E22677A4900AEE780 /* LoginView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
+				811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */,
+				812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */,
+				812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
