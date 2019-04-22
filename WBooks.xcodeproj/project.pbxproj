@@ -12,6 +12,9 @@
 		0CCF002E219208180061050C /* WolmoCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCF002D219208180061050C /* WolmoCore.framework */; };
 		811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BD34B226766AF00AEE780 /* LoginViewController.swift */; };
 		811BD34E22677A4900AEE780 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811BD34D22677A4900AEE780 /* LoginView.swift */; };
+		812F2DDF226E17FD000C19A1 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F2DDE226E17FD000C19A1 /* LibraryView.xib */; };
+		812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE0226E181B000C19A1 /* LibraryView.swift */; };
+		812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE2226E182A000C19A1 /* LibraryViewController.swift */; };
 		81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1D60C22665FBC000C0465 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -76,6 +79,9 @@
 		0CCF002D219208180061050C /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		811BD34B226766AF00AEE780 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		811BD34D22677A4900AEE780 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		812F2DDE226E17FD000C19A1 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
+		812F2DE0226E181B000C19A1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		812F2DE2226E182A000C19A1 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		81A1D6022266572F000C0465 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		81A1D60322665783000C0465 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		81A1D60422665799000C0465 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -159,9 +165,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812F2DDD226E17C7000C19A1 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				812F2DDE226E17FD000C19A1 /* LibraryView.xib */,
+				812F2DE0226E181B000C19A1 /* LibraryView.swift */,
+				812F2DE2226E182A000C19A1 /* LibraryViewController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		81A1D60822665C03000C0465 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				812F2DDD226E17C7000C19A1 /* Library */,
 				81A1D60922665C26000C0465 /* Login */,
 			);
 			name = Views;
@@ -392,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812F2DDF226E17FD000C19A1 /* LibraryView.xib in Resources */,
 				81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -468,6 +486,8 @@
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */,
+				812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */,
+				812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
