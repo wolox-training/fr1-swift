@@ -18,6 +18,8 @@ class LibraryTableViewCell: UITableViewCell, NibLoadable {
     
     @IBOutlet weak var frontBookImage: UIImageView!
     
+    @IBOutlet weak var bodyBook: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

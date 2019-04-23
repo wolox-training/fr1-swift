@@ -42,7 +42,7 @@ final class LibraryViewController: UIViewController, UITableViewDelegate, UITabl
         
         cell.titleLabel.text = dict["tittle"]
         cell.authorLabel.text = dict["author"]
-        cell.layer.cornerRadius = 8
+        cell.bodyBook.layer.cornerRadius = 10
         
         return cell
     }
