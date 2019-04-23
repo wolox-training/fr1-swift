@@ -15,6 +15,8 @@
 		812F2DDF226E17FD000C19A1 /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F2DDE226E17FD000C19A1 /* LibraryView.xib */; };
 		812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE0226E181B000C19A1 /* LibraryView.swift */; };
 		812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE2226E182A000C19A1 /* LibraryViewController.swift */; };
+		812F2DE7226E3CEA000C19A1 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE5226E3CEA000C19A1 /* LibraryTableViewCell.swift */; };
+		812F2DE8226E3CEA000C19A1 /* LibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F2DE6226E3CEA000C19A1 /* LibraryTableViewCell.xib */; };
 		81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1D60C22665FBC000C0465 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		812F2DDE226E17FD000C19A1 /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		812F2DE0226E181B000C19A1 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		812F2DE2226E182A000C19A1 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		812F2DE5226E3CEA000C19A1 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		812F2DE6226E3CEA000C19A1 /* LibraryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTableViewCell.xib; sourceTree = "<group>"; };
 		81A1D6022266572F000C0465 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		81A1D60322665783000C0465 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		81A1D60422665799000C0465 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -168,11 +172,21 @@
 		812F2DDD226E17C7000C19A1 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				812F2DE4226E3CBE000C19A1 /* Library_Cell */,
 				812F2DDE226E17FD000C19A1 /* LibraryView.xib */,
 				812F2DE0226E181B000C19A1 /* LibraryView.swift */,
 				812F2DE2226E182A000C19A1 /* LibraryViewController.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		812F2DE4226E3CBE000C19A1 /* Library_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				812F2DE5226E3CEA000C19A1 /* LibraryTableViewCell.swift */,
+				812F2DE6226E3CEA000C19A1 /* LibraryTableViewCell.xib */,
+			);
+			path = Library_Cell;
 			sourceTree = "<group>";
 		};
 		81A1D60822665C03000C0465 /* Views */ = {
@@ -410,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				812F2DDF226E17FD000C19A1 /* LibraryView.xib in Resources */,
+				812F2DE8226E3CEA000C19A1 /* LibraryTableViewCell.xib in Resources */,
 				81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -487,6 +502,7 @@
 				E1530D9C1ED37905002A9002 /* RollbarService.swift in Sources */,
 				811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */,
 				812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */,
+				812F2DE7226E3CEA000C19A1 /* LibraryTableViewCell.swift in Sources */,
 				812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
