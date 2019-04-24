@@ -10,11 +10,10 @@ import Foundation
 import UIKit
 import WolmoCore
 
-final class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class LibraryViewController: UIViewController {
     private let _libraryView: LibraryView = LibraryView.loadFromNib()!
     
-    var booksArray: Array = [["tittle": "A Little Bird Told Me", "author":"Timothy Cross"], ["tittle": "When the Doves Disappeared", "author":"Sofi Oksanen"],["tittle": "The Best Book in the World", "author":"Peter Sjernstrom"], ["tittle": "Be Creative", "author":"Tony Alcazar"], ["tittle": "Redesign the Web", "author":"Liliana Castilla"]]
+    var booksArray: Array = [["tittle": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["tittle": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["tittle": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["tittle": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["tittle": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
     
     override func loadView() {
         view = _libraryView
@@ -24,9 +23,12 @@ final class LibraryViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         
         setUpCells()
-    
+        setUpNavigation()
     }
     
+}
+
+extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return booksArray.count
     }
@@ -42,6 +44,7 @@ final class LibraryViewController: UIViewController, UITableViewDelegate, UITabl
         
         cell.titleLabel.text = dict["tittle"]
         cell.authorLabel.text = dict["author"]
+        cell.frontBookImage.image = UIImage(named: dict["img"]!)
         cell.bodyBook.layer.cornerRadius = 10
         
         return cell
@@ -52,11 +55,14 @@ final class LibraryViewController: UIViewController, UITableViewDelegate, UITabl
 fileprivate extension LibraryViewController {
     func setUpCells() {
         _libraryView.booksTable.register(cell: LibraryTableViewCell.self)
-        _libraryView.backgroundColor = UIColor(red:0.92, green:0.96, blue:0.98, alpha:1)
-        
+        _libraryView.backgroundColor = UIColor.backgroundLightBlue()
         _libraryView.booksTable.delegate = self
         _libraryView.booksTable.dataSource = self
-        
+    }
+    
+    func setUpNavigation() {
+        let backgroundImg = UIImage(named: "bc_nav bar")
+        navigationController?.navigationBar.setBackgroundImage(backgroundImg, for: .default)
     }
     
 }

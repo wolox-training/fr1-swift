@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import WolmoCore
 
-final class LibraryView: UIView, NibLoadable {
+class LibraryView: UIView, NibLoadable {
 
     @IBOutlet weak var booksTable: UITableView!
 }
