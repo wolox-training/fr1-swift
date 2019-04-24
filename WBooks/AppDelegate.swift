@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityLogger.shared.startLogging()
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = LibraryViewController()
+        window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
         
         return true

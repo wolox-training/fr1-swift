@@ -12,10 +12,6 @@ import WolmoCore
 
 final class LoginView: UIView, NibLoadable {
     
-    @IBOutlet weak var loginGoogle: UIButton!
-    
-    @IBAction func ingresarButton(_ sender: UIButton) {
-        print("Ingresando...")
-    }
+    @IBOutlet weak var loginGoogle: UIButton!    
     
 }
