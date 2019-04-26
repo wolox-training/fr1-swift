@@ -18,6 +18,7 @@
 		812F2DE7226E3CEA000C19A1 /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812F2DE5226E3CEA000C19A1 /* LibraryTableViewCell.swift */; };
 		812F2DE8226E3CEA000C19A1 /* LibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812F2DE6226E3CEA000C19A1 /* LibraryTableViewCell.xib */; };
 		814934902270B2D900DB3D02 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149348F2270B2D900DB3D02 /* UIColorExtensions.swift */; };
+		815890C4227350F7005F26AA /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815890C3227350F7005F26AA /* UIImageExtensions.swift */; };
 		81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1D60C22665FBC000C0465 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		812F2DE5226E3CEA000C19A1 /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		812F2DE6226E3CEA000C19A1 /* LibraryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTableViewCell.xib; sourceTree = "<group>"; };
 		8149348F2270B2D900DB3D02 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		815890C3227350F7005F26AA /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		81A1D6022266572F000C0465 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		81A1D60322665783000C0465 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		81A1D60422665799000C0465 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				8149348F2270B2D900DB3D02 /* UIColorExtensions.swift */,
+				815890C3227350F7005F26AA /* UIImageExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */,
 				812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */,
 				812F2DE7226E3CEA000C19A1 /* LibraryTableViewCell.swift in Sources */,
+				815890C4227350F7005F26AA /* UIImageExtensions.swift in Sources */,
 				812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);

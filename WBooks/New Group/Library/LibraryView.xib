@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2l8-9k-Ifi">
-                    <rect key="frame" x="16" y="83" width="343" height="521"/>
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2l8-9k-Ifi">
+                    <rect key="frame" x="8" y="35" width="359" height="642"/>
                     <color key="backgroundColor" red="0.90980392156862744" green="0.95294117647058818" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="separatorColor" red="0.90980392160000001" green="0.95294117649999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <variation key="heightClass=compact-widthClass=compact">
@@ -27,16 +27,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="2l8-9k-Ifi" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MpM-4f-cJX"/>
-                <constraint firstItem="2l8-9k-Ifi" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Nxh-lk-xOi"/>
-                <constraint firstItem="2l8-9k-Ifi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="63" id="aTx-5j-ZE2"/>
-                <constraint firstItem="2l8-9k-Ifi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="v41-Dy-mEy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2l8-9k-Ifi" secondAttribute="trailing" constant="8" id="Ddk-fq-6l8"/>
+                <constraint firstItem="2l8-9k-Ifi" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="UNe-eD-b93"/>
+                <constraint firstItem="2l8-9k-Ifi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="bq5-1u-uUk"/>
+                <constraint firstAttribute="bottom" secondItem="2l8-9k-Ifi" secondAttribute="bottom" constant="-10" id="n9o-ly-a2L"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="booksTable" destination="2l8-9k-Ifi" id="QTd-uX-wP2"/>
             </connections>
-            <point key="canvasLocation" x="133.59999999999999" y="154.27286356821591"/>
+            <point key="canvasLocation" x="133.59999999999999" y="152.47376311844079"/>
         </view>
     </objects>
 </document>
