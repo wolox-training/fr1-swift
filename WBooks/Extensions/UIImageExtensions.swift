@@ -18,4 +18,24 @@ extension UIImage {
     static func notification() -> UIImage {
         return UIImage(named: "ic_notifications")!
     }
+    
+    static func library() -> UIImage {
+        return UIImage(named: "ic_library active")!
+    }
+    
+    static func wishList() -> UIImage {
+        return UIImage(named: "ic_wishlist")!
+    }
+    
+    static func addNew() -> UIImage {
+        return UIImage(named: "ic_add new")!
+    }
+    
+    static func myRentals() -> UIImage {
+        return UIImage(named: "ic_myrentals")!
+    }
+    
+    static func settings() -> UIImage {
+        return UIImage(named: "ic_settings")!
+    }
 }

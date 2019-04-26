@@ -22,23 +22,23 @@ extension TabBarViewController {
     func setUpTab() {
         let home = UINavigationController(rootViewController: LibraryViewController())
         home.title = "tabBar.libraryTitle".localized()
-        home.tabBarItem.image = UIImage(named: "ic_library active")
+        home.tabBarItem.image = .library()
         
         let wishlist = UINavigationController(rootViewController: LibraryViewController())
         wishlist.tabBarItem.title = "Wishlist"
-        wishlist.tabBarItem.image = UIImage(named: "ic_wishlist")
+        wishlist.tabBarItem.image = .wishList()
         
         let addNew = UINavigationController(rootViewController: LibraryViewController())
         addNew.tabBarItem.title = "Add New"
-        addNew.tabBarItem.image = UIImage(named: "ic_add new")
+        addNew.tabBarItem.image = .addNew()
         
         let rentals = UINavigationController(rootViewController: LibraryViewController())
         rentals.tabBarItem.title = "Rentals"
-        rentals.tabBarItem.image = UIImage(named: "ic_myrentals")
+        rentals.tabBarItem.image = .myRentals()
         
         let settings = UINavigationController(rootViewController: LibraryViewController())
         settings.tabBarItem.title = "Settings"
-        settings.tabBarItem.image = UIImage(named: "ic_settings")
+        settings.tabBarItem.image = .settings()
         
         viewControllers = [home, wishlist, addNew, rentals, settings]
     }
