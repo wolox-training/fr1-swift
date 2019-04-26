@@ -13,7 +13,7 @@ import WolmoCore
 class LibraryViewController: UIViewController {
     private let _libraryView: LibraryView = LibraryView.loadFromNib()!
     
-    var booksArray: Array = [["tittle": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["tittle": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["tittle": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["tittle": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["tittle": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
+    private var booksArray: Array = [["tittle": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["title": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["tittle": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["tittle": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["tittle": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
     
     override func loadView() {
         view = _libraryView
@@ -42,7 +42,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         
         let dict = booksArray[indexPath.row]
         
-        cell.titleLabel.text = dict["tittle"]
+        cell.titleLabel.text = dict["title"]
         cell.authorLabel.text = dict["author"]
         cell.frontBookImage.image = UIImage(named: dict["img"]!)
         cell.bodyBook.layer.cornerRadius = 10
@@ -65,15 +65,12 @@ fileprivate extension LibraryViewController {
         
         navigationController?.navigationBar.setBackgroundImage(backgroundImg, for: .default)
         
-        let searchImg = UIImage(named: "ic_search")
-        let notificationImg = UIImage(named: "ic_notifications")
-        
-        let rightButton = UIBarButtonItem(image: searchImg, style: .done , target: self,
+        let rightButton = UIBarButtonItem(image: .search(), style: .done, target: self,
                                           action: #selector(rightButtonHandler(sender:)))
         navigationItem.rightBarButtonItem = rightButton
         rightButton.tintColor = .white
         
-        let leftButton = UIBarButtonItem(image: notificationImg, style: .done, target: self,
+        let leftButton = UIBarButtonItem(image: .notification(), style: .done, target: self,
                                          action: #selector(leftButtonHandler(sender:)))
         navigationItem.leftBarButtonItem = leftButton
         leftButton.tintColor = .white
