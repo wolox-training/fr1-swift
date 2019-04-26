@@ -62,7 +62,35 @@ fileprivate extension LibraryViewController {
     
     func setUpNavigation() {
         let backgroundImg = UIImage(named: "bc_nav bar")
+        
         navigationController?.navigationBar.setBackgroundImage(backgroundImg, for: .default)
+        
+        let searchImg = UIImage(named: "ic_search")
+        let notificationImg = UIImage(named: "ic_notifications")
+        
+        let rightButton = UIBarButtonItem(image: searchImg, style: .done , target: self,
+                                          action: #selector(rightButtonHandler(sender:)))
+        navigationItem.rightBarButtonItem = rightButton
+        rightButton.tintColor = .white
+        
+        let leftButton = UIBarButtonItem(image: notificationImg, style: .done, target: self,
+                                         action: #selector(leftButtonHandler(sender:)))
+        navigationItem.leftBarButtonItem = leftButton
+        leftButton.tintColor = .white
+        
+        title = "LIBRARY".localized()
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    }
+    
+    @objc
+    func rightButtonHandler(sender: UIBarButtonItem) {
+        //TODO
+    }
+    
+    @objc
+    func leftButtonHandler(sender: UIBarButtonItem) {
+        //TODO
     }
     
 }
