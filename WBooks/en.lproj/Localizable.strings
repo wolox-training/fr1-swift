@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WBooks
+
+  Created by Fermin Robilotte on 26/04/2019.
+  Copyright © 2019 Wolox. All rights reserved.
+*/
+
+// Library
+
+"library.title" = "Library";

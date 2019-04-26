@@ -75,7 +75,7 @@ fileprivate extension LibraryViewController {
         navigationItem.leftBarButtonItem = leftButton
         leftButton.tintColor = .white
         
-        title = "LIBRARY".localized()
+        title = "library.title".localized()
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
     }
