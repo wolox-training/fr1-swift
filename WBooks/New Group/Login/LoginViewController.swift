@@ -24,5 +24,15 @@ final class LoginViewController: UIViewController {
         _loginView.loginGoogle.layer.cornerRadius = 20
         _loginView.loginGoogle.layer.borderWidth = 1.5
         _loginView.loginGoogle.layer.borderColor = UIColor.white.cgColor
+        
+        _loginView.loginGoogle.addTarget(self, action: #selector(loginToMain(sender:)), for: .touchUpInside)
+        
+    }
+    
+    @objc
+    func loginToMain(sender: UIButton) {
+        let libraryController = LibraryViewController()
+        let navigationController = UINavigationController(rootViewController: libraryController)
+        self.present(navigationController, animated: true, completion: .none)
     }
 }
