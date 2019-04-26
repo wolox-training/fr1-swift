@@ -33,6 +33,7 @@ final class LoginViewController: UIViewController {
     func loginToMain(sender: UIButton) {
         let libraryController = LibraryViewController()
         let navigationController = UINavigationController(rootViewController: libraryController)
-        self.present(navigationController, animated: true, completion: .none)
+        let tabBarController = TabBarViewController()
+        self.present(tabBarController, animated: true, completion: .none)
     }
 }

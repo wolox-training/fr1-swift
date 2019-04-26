@@ -13,7 +13,7 @@ import WolmoCore
 class LibraryViewController: UIViewController {
     private let _libraryView: LibraryView = LibraryView.loadFromNib()!
     
-    private var booksArray: Array = [["tittle": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["title": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["tittle": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["tittle": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["tittle": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
+    private var booksArray: Array = [["title": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["title": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["title": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["title": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["title": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
     
     override func loadView() {
         view = _libraryView
