@@ -18,5 +18,20 @@ class LibraryTableViewCell: UITableViewCell, NibLoadable {
     
     @IBOutlet weak var frontBookImage: UIImageView!
     
-    @IBOutlet weak var bodyBook: UIView!
+    @IBOutlet weak var bodyBook: UIView! {
+        didSet {
+            bodyBook.layer.cornerRadius = 10
+        }
+    }
+}
+
+internal extension LibraryTableViewCell {
+    
+    func bind(viewModel: BookViewModel){
+        titleLabel.text = viewModel.title
+        authorLabel.text = viewModel.author
+        viewModel.downloadImage(closure: {
+            self.frontBookImage.image = $0
+        })
+    }
 }

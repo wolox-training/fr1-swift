@@ -12,8 +12,7 @@ import WolmoCore
 
 class LibraryViewController: UIViewController {
     private let _libraryView: LibraryView = LibraryView.loadFromNib()!
-    
-    private var booksArray: Array = [["title": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["title": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["title": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["title": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["title": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
+    private let _viewModel = LibraryViewModel()
     
     override func loadView() {
         view = _libraryView
@@ -41,11 +40,6 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = _libraryView.booksTable.dequeue(cell: LibraryTableViewCell.self, for: indexPath)!
         
         let dict = booksArray[indexPath.row]
-        
-        cell.titleLabel.text = dict["title"]
-        cell.authorLabel.text = dict["author"]
-        cell.frontBookImage.image = UIImage(named: dict["img"]!)
-        cell.bodyBook.layer.cornerRadius = 10
         
         return cell
     }

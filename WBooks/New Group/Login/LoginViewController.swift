@@ -21,12 +21,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _loginView.loginGoogle.layer.cornerRadius = 20
-        _loginView.loginGoogle.layer.borderWidth = 1.5
-        _loginView.loginGoogle.layer.borderColor = UIColor.white.cgColor
-        
         _loginView.loginGoogle.addTarget(self, action: #selector(loginToMain(sender:)), for: .touchUpInside)
-        
     }
     
     @objc

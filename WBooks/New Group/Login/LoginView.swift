@@ -12,6 +12,12 @@ import WolmoCore
 
 final class LoginView: UIView, NibLoadable {
     
-    @IBOutlet weak var loginGoogle: UIButton!    
+    @IBOutlet weak var loginGoogle: UIButton! {
+        didSet {
+            loginGoogle.layer.cornerRadius = 20
+            loginGoogle.layer.borderWidth = 1.5
+            loginGoogle.layer.borderColor = UIColor.white.cgColor
+        }
+    }
     
 }
