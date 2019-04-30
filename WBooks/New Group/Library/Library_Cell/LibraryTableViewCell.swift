@@ -27,12 +27,11 @@ class LibraryTableViewCell: UITableViewCell, NibLoadable {
 
 internal extension LibraryTableViewCell {
     
-    func bind(viewModel: BookViewModel) {
+    func bind(viewModel: BookViewModel){
         titleLabel.text = viewModel.title
         authorLabel.text = viewModel.author
-        frontBookImage.image = UIImage(named: "img_book1")
-        //viewModel.downloadImage(closure: {
-        //    self.frontBookImage.image = $0
-        //})
+        viewModel.downloadImage(closure: {
+            self.frontBookImage.image = $0
+        })
     }
 }

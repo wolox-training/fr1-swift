@@ -25,8 +25,9 @@ internal class BookViewModel {
     }
     
     func downloadImage(closure: @escaping (UIImage) -> Void) {
-        let imageString = _book.image
-        let imageURL = URL(string: imageString!)!
+        guard let imageString = _book.image , let imageURL = URL(string: imageString) else {
+            return
+        }
         
         let session = URLSession(configuration: .default)
         session.dataTask(with: imageURL) { (data, response, error) in
