@@ -43,7 +43,9 @@ internal class BookViewModel {
                 return
             }
             
-            closure(UIImage(data: data)!)
+            DispatchQueue.main.async() {
+                closure(UIImage(data: data)!)
+            }
             }.resume()
     }
 }

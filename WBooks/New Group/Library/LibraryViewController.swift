@@ -12,8 +12,8 @@ import WolmoCore
 
 class LibraryViewController: UIViewController {
     private let _libraryView: LibraryView = LibraryView.loadFromNib()!
-    private let _viewModel = LibraryViewModel()
-    
+    private let _viewModel: LibraryViewModel = LibraryViewModel(repository: BookRepository())
+
     override func loadView() {
         view = _libraryView
     }
@@ -21,15 +21,17 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _viewModel.getBooks(reloadTable: { () in
+            self._libraryView.booksTable.reloadData()
+        })
         setUpCells()
         setUpNavigation()
-    }
-    
+    }    
 }
 
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return booksArray.count
+        return _viewModel.arrayBooks.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -39,7 +41,8 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = _libraryView.booksTable.dequeue(cell: LibraryTableViewCell.self, for: indexPath)!
         
-        let dict = booksArray[indexPath.row]
+        let viewModel = _viewModel.arrayBooks[indexPath.row]
+        cell.bind(viewModel: viewModel)
         
         return cell
     }
