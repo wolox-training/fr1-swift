@@ -24,8 +24,8 @@ internal class BookViewModel {
         return _book.title
     }
     
-    func downloadImage(closure: @escaping (UIImage) -> Void) {
-        guard let imageString = _book.image , let imageURL = URL(string: imageString) else {
+    func downloadImage(onSuccess: @escaping (UIImage) -> Void) {
+        guard let imageString = _book.image, let imageURL = URL(string: imageString) else {
             return
         }
         
@@ -45,7 +45,7 @@ internal class BookViewModel {
             }
             
             DispatchQueue.main.async() {
-                closure(UIImage(data: data)!)
+                onSuccess(UIImage(data: data)!)
             }
             }.resume()
     }

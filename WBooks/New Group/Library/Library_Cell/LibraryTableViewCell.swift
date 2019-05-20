@@ -30,7 +30,8 @@ internal extension LibraryTableViewCell {
     func bind(viewModel: BookViewModel){
         titleLabel.text = viewModel.title
         authorLabel.text = viewModel.author
-        viewModel.downloadImage(closure: {
+        
+        viewModel.downloadImage(onSuccess: { [unowned self] in
             self.frontBookImage.image = $0
         })
     }

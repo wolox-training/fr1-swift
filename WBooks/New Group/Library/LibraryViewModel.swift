@@ -17,7 +17,7 @@ class LibraryViewModel {
     }
     
     func getBooks(reloadTable: @escaping () -> Void) {
-        _repository.fetchBooks(onSuccess: { (books) in
+        _repository.fetchBooks(onSuccess: { [unowned self] books in
             self.arrayBooks = books.map{book in BookViewModel(book: book)}
             reloadTable()
         }) { (error) in
