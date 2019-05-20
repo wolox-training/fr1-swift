@@ -12,9 +12,8 @@ import WolmoCore
 
 class LibraryViewController: UIViewController {
     private let _libraryView: LibraryView = LibraryView.loadFromNib()!
-    
-    private var booksArray: Array = [["title": "A Little Bird Told Me", "author":"Timothy Cross", "img":"img_book1"], ["title": "When the Doves Disappeared", "author":"Sofi Oksanen", "img":"img_book2"],["title": "The Best Book in the World", "author":"Peter Sjernstrom", "img":"img_book3"], ["title": "Be Creative", "author":"Tony Alcazar", "img":"img_book4"], ["title": "Redesign the Web", "author":"Liliana Castilla", "img":"img_book5"]]
-    
+    private let _viewModel: LibraryViewModel = LibraryViewModel(repository: BookRepository())
+
     override func loadView() {
         view = _libraryView
     }
@@ -22,15 +21,17 @@ class LibraryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        _viewModel.getBooks(reloadTable: { () in
+            self._libraryView.booksTable.reloadData()
+        })
         setUpCells()
         setUpNavigation()
-    }
-    
+    }    
 }
 
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return booksArray.count
+        return _viewModel.arrayBooks.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -40,12 +41,8 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = _libraryView.booksTable.dequeue(cell: LibraryTableViewCell.self, for: indexPath)!
         
-        let dict = booksArray[indexPath.row]
-        
-        cell.titleLabel.text = dict["title"]
-        cell.authorLabel.text = dict["author"]
-        cell.frontBookImage.image = UIImage(named: dict["img"]!)
-        cell.bodyBook.layer.cornerRadius = 10
+        let viewModel = _viewModel.arrayBooks[indexPath.row]
+        cell.bind(viewModel: viewModel)
         
         return cell
     }

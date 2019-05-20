@@ -20,7 +20,11 @@
 		8147DE5D22736A6800753FC9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8147DE5C22736A6800753FC9 /* TabBarViewController.swift */; };
 		8147DE6022738FA400753FC9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8147DE6222738FA400753FC9 /* Localizable.strings */; };
 		814934902270B2D900DB3D02 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8149348F2270B2D900DB3D02 /* UIColorExtensions.swift */; };
+		815839CC2278A3C6007F5D82 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815839CB2278A3C6007F5D82 /* LibraryViewModel.swift */; };
 		815890C4227350F7005F26AA /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815890C3227350F7005F26AA /* UIImageExtensions.swift */; };
+		81726FFD22774C5C00642FF8 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726FFC22774C5C00642FF8 /* Book.swift */; };
+		817270002277557400642FF8 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726FFF2277557400642FF8 /* BookViewModel.swift */; };
+		81727005227792D000642FF8 /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81727004227792D000642FF8 /* BookRepository.swift */; };
 		81A1D60D22665FBC000C0465 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81A1D60C22665FBC000C0465 /* LoginView.xib */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
@@ -93,7 +97,11 @@
 		8147DE5C22736A6800753FC9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		8147DE6122738FA400753FC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8149348F2270B2D900DB3D02 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		815839CB2278A3C6007F5D82 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
 		815890C3227350F7005F26AA /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		81726FFC22774C5C00642FF8 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		81726FFF2277557400642FF8 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		81727004227792D000642FF8 /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		81A1D6022266572F000C0465 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		81A1D60322665783000C0465 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
 		81A1D60422665799000C0465 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 				812F2DDE226E17FD000C19A1 /* LibraryView.xib */,
 				812F2DE0226E181B000C19A1 /* LibraryView.swift */,
 				812F2DE2226E182A000C19A1 /* LibraryViewController.swift */,
+				815839CB2278A3C6007F5D82 /* LibraryViewModel.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -214,9 +223,34 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		81726FFB22774C3300642FF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81726FFC22774C5C00642FF8 /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81726FFE2277556200642FF8 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				81726FFF2277557400642FF8 /* BookViewModel.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		81727003227792A500642FF8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				81727004227792D000642FF8 /* BookRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		81A1D60822665C03000C0465 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81726FFE2277556200642FF8 /* Book */,
 				812F2DDD226E17C7000C19A1 /* Library */,
 				81A1D60922665C26000C0465 /* Login */,
 			);
@@ -258,6 +292,8 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				81727003227792A500642FF8 /* Repositories */,
+				81726FFB22774C3300642FF8 /* Model */,
 				8147DE5B22736A4D00753FC9 /* TabBar */,
 				8149348E2270B2A800DB3D02 /* Extensions */,
 				81A1D60822665C03000C0465 /* Views */,
@@ -526,6 +562,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817270002277557400642FF8 /* BookViewModel.swift in Sources */,
+				81727005227792D000642FF8 /* BookRepository.swift in Sources */,
 				814934902270B2D900DB3D02 /* UIColorExtensions.swift in Sources */,
 				811BD34E22677A4900AEE780 /* LoginView.swift in Sources */,
 				8147DE5D22736A6800753FC9 /* TabBarViewController.swift in Sources */,
@@ -534,8 +572,10 @@
 				811BD34C226766AF00AEE780 /* LoginViewController.swift in Sources */,
 				812F2DE3226E182A000C19A1 /* LibraryViewController.swift in Sources */,
 				812F2DE7226E3CEA000C19A1 /* LibraryTableViewCell.swift in Sources */,
+				81726FFD22774C5C00642FF8 /* Book.swift in Sources */,
 				815890C4227350F7005F26AA /* UIImageExtensions.swift in Sources */,
 				812F2DE1226E181B000C19A1 /* LibraryView.swift in Sources */,
+				815839CC2278A3C6007F5D82 /* LibraryViewModel.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
